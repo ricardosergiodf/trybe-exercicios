@@ -26,3 +26,7 @@ li em {
 .java {
     background-color: pink;
 }
+a:hover {
+    color: green;
+    font-weight: bold;
+}
