@@ -1,8 +1,8 @@
 const pecaXadrez = "rainha";
 
-switch (pecaXadrez){
+switch (pecaXadrez.toLowerCase()){
     case "peao":
-        console.log("Peça escolhida:", pecaXadrez,  "-> Frente ou comer na diagonal (uma casa)");
+        console.log("Peça escolhida:", pecaXadrez,  "-> Frente ou comer na diagonal (uma casa), no primeiro movimento pode andar duas casas.");
         break;
     
     case "torre":
