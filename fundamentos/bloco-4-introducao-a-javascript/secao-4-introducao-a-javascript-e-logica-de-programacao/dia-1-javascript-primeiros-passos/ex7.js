@@ -18,6 +18,6 @@ else if (porcentagem >= 50) {
 else if (porcentagem > 50) {
     console.log("F");
 }
-else if (porcentagem < 50 || porcentagem > 100) {
+else if (porcentagem < 0 || porcentagem > 100) {
     console.log("ERRO!");
 }
