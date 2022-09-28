@@ -5,7 +5,7 @@ const c = 20;
 if (a > b && a > c){
     console.log("O maior é:", a);
 }
-if (b > c && b > a){
+else if (b > c && b > a){
     console.log("O maior é:", b);
 }
 else {
