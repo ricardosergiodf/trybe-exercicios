@@ -1,6 +1,6 @@
 function menorValor (array) {
     let menor = array[0];
-    for (index = 0; index < array.length; index += 1) {
+    for (let index = 0; index < array.length; index += 1) {
         if (array[index] < menor) {
             menor = index;
         }
