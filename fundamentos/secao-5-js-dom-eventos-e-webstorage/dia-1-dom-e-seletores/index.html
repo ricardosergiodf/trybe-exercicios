@@ -85,7 +85,16 @@
         mudaText.innerText = mudaText.innerText.toUpperCase();
       }
       ex5();
-      
+
+      function ex6 () {
+        let exibirConteudo = document.getElementsByTagName("p");
+
+        for (index = 0; index < exibirConteudo.length; index += 1) {
+            console.log(exibirConteudo[index].innerHTML);
+        }
+      }
+      ex6();
+
     </script>
   </body>
 </html>
