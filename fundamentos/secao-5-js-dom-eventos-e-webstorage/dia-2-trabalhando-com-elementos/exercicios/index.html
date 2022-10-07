@@ -122,6 +122,10 @@
         const removeSectionLeft = document.getElementsByClassName("left-content");
         elementMain.removeChild(removeSectionLeft);
 
+        // Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
+        const centralizeSectionRight = document.getElementsByClassName("right-content");
+        centralizeSectionRight.style.marginRight = "auto";
+
     </script>
 </body>
 
