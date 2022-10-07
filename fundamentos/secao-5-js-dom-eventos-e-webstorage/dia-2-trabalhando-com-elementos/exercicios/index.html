@@ -60,30 +60,37 @@
 <body>
     <script>
 
+        // Adicione a tag h1 com o texto Exercício - JavaScript DOM como filho da tag body;
         const elementH1 = document.createElement("h1");
         elementH1.innerText = "Exercício - Javascript DOM";
         document.body.appendChild(elementH1);
 
+        // Adicione a tag main com a classe main-content como filho da tag body;
         const elementMain = document.createElement("main");
         elementMain.className = "main-content";
         document.body.appendChild(elementMain);
 
+        // Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
         const elementSection = document.createElement("section");
         elementSection.classList("center-content");
         elementMain.appendChild(elementSection);
 
+        // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
         const elementP = document.createElement("p");
         elementP.innerText = "Isso é um parágrafo"
         elementSection.appendChild(elementP);
 
+        // Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
         const elementSectionLeft = document.createElement("section");
         elementSectionLeft.className = "left-content";
         elementMain.appendChild(elementSectionLeft);
 
+        // Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
         const elementSectionRight = document.createElement("section");
         elementSectionRight.className = "right-content";
         elementMain.appendChild(elementSection3);
 
+        // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
         const imagem = document.createElement("img");
         imagem.className = "small-image";
         imagem.src = "https://picsum.photos/200";
@@ -130,6 +137,7 @@
         const sectionCentral = document.getElementsByClassName("center-content");
         sectionCentral.parentNode.style.backgroundColor = "green";
 
+        // Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
         const ul = document.getElementsByTagName("ul")[0];
         ul.lastChild.remove();
         ul.lastChild.remove();
