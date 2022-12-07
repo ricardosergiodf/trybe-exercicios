@@ -1,1 +1,1 @@
-Meu primeiro repositório git!!
+Exercícios - Trybe
