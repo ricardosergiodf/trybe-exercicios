@@ -71,13 +71,13 @@ const getPopulation = () => {
     return countries.reduce((acc, curr) => acc + curr.population, 0);
 };
 
-//console.log(getPopulation(countries));
+//console.log(getPopulation());
 
 const getTotalArea = () => {
     return countries.reduce((acc, curr) => acc + curr.area, 0);
 }
 
-//console.log(getTotalArea(countries));
+//console.log(getTotalArea());
 
 const longestName = () => {
     return countries.reduce((acc, curr) => {
@@ -85,4 +85,20 @@ const longestName = () => {
     });
 }
 
-console.log(longestName(countries));
+//console.log(longestName());
+
+const names = [
+    'Aanemarie', 'Adervandes', 'Akifusa',
+    'Abegildo', 'Adicellia', 'Aladonata',
+    'Abeladerco', 'Adieidy', 'Alarucha',
+];
+
+const lettersArray = names.join('').toLowerCase().split('');
+
+const countA = () => {
+    return lettersArray.reduce((acc, curr) => {
+        return curr === 'a' ? acc += 1 : acc;
+    }, 0);
+}
+
+console.log(countA());
