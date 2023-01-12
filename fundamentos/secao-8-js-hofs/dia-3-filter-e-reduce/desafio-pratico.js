@@ -71,4 +71,10 @@ const getPopulation = () => {
     return countries.reduce((acc, curr) => acc + curr.population, 0);
 };
 
-console.log(getPopulation(countries));
+//console.log(getPopulation(countries));
+
+const getTotalArea = () => {
+    return countries.reduce((acc, curr) => acc + curr.area, 0);
+}
+
+console.log(getTotalArea(countries));
