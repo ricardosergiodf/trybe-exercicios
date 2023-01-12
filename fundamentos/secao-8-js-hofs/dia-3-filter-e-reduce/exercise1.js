@@ -81,4 +81,17 @@ const booksByAuthorBirthYear = (birthYear) => {
     return books.filter((book) => book.author.birthYear === birthYear).map((book) => book.name);
 }
 const result = booksByAuthorBirthYear(1920);
-console.log(result);
+
+//console.log(result);
+
+const fantasyOrScienceFictionAuthors = () => {
+    const wantedGenres = ['Fantasia', 'Ficção Científica'];
+
+    return books
+    .filter((book) => wantedGenres
+    .includes(book.genre))
+    .map((book) => book.author.name)
+    .sort();
+}
+
+console.log(fantasyOrScienceFictionAuthors(books));
