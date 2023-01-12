@@ -98,7 +98,18 @@ const fantasyOrScienceFictionAuthors = () => {
 
 const oldBooks = () => {
     const currentYear = new Date().getFullYear();
-    return books.filter((book) => (currentYear - book.releaseYear) > 60).map((book) => book.name);
+    return books
+        .filter((book) => (currentYear - book.releaseYear) > 60)
+        .map((book) => book.name);
 }
 
-console.log(oldBooks(books));
+//console.log(oldBooks(books));
+
+const authorWith3DotsOnName = () => {
+    return books.find((book) => (
+        book.author.name.split(' ')
+            .filter((word) => word.endsWith('.')).length === 3
+    )).name;
+}
+
+console.log(authorWith3DotsOnName(books));
