@@ -77,4 +77,12 @@ const getTotalArea = () => {
     return countries.reduce((acc, curr) => acc + curr.area, 0);
 }
 
-console.log(getTotalArea(countries));
+//console.log(getTotalArea(countries));
+
+const longestName = () => {
+    return countries.reduce((acc, curr) => {
+        return acc.name.length > curr.name.length ? acc : curr;
+    });
+}
+
+console.log(longestName(countries));
