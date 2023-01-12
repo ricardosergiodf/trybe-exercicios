@@ -67,4 +67,12 @@ const fantasyOrScienceFiction = () => {
     });
 };
 
-console.log(fantasyOrScienceFiction(books));
+//console.log(fantasyOrScienceFiction(books));
+
+const oldBooksOrdered = () => {
+    const currentYear = new Date().getFullYear();
+    
+    return books.filter((book) => (currentYear - book.releaseYear) >= 60).sort((a, b) => a.releaseYear - b.releaseYear);
+}
+
+console.log(oldBooksOrdered(books));
