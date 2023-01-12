@@ -88,10 +88,17 @@ const fantasyOrScienceFictionAuthors = () => {
     const wantedGenres = ['Fantasia', 'Ficção Científica'];
 
     return books
-    .filter((book) => wantedGenres
-    .includes(book.genre))
-    .map((book) => book.author.name)
-    .sort();
+        .filter((book) => wantedGenres
+            .includes(book.genre))
+        .map((book) => book.author.name)
+        .sort();
 }
 
-console.log(fantasyOrScienceFictionAuthors(books));
+//console.log(fantasyOrScienceFictionAuthors(books));
+
+const oldBooks = () => {
+    const currentYear = new Date().getFullYear();
+    return books.filter((book) => (currentYear - book.releaseYear) > 60).map((book) => book.name);
+}
+
+console.log(oldBooks(books));
