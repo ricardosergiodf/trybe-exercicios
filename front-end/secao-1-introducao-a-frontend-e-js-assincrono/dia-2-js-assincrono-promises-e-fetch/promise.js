@@ -25,4 +25,8 @@ randomPromise()
   .catch((error) => {
     console.log(`Promise rejeitada: ${error.message}`);
     // .CATCH Captura a promise Rejeitada e retorna o erro no console.log
-  });
+  })
+  .finally(() => console.log('Fim da execução da promise'));
+  // .FINALLY Retorna um código após a finalização da promise.
+
+  console.log(`Esse número NÃO foi gerado por um código assíncrono: ${generateRandomNumber()}`);
