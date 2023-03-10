@@ -16,21 +16,30 @@ class App extends React.Component {
   }
 
   handleButtonOne() {
-    this.setState((estadoAnterior, _props) => ({
+    const { numeroDeCliques1 } = this.state;
+    this.setState((estadoAnterior) => ({
       numeroDeCliques1: estadoAnterior.numeroDeCliques1 + 1,
-    }));
+    }), () => {
+      console.log(`Botão 1: ${this.getButtonColor(numeroDeCliques1)}`);
+    });
   }
 
   handleButtonTwo() {
-    this.setState((estadoAnterior, _props) => ({
+    const { numeroDeCliques2 } = this.state;
+    this.setState((estadoAnterior) => ({
       numeroDeCliques2: estadoAnterior.numeroDeCliques2 + 1,
-    }));
+    }), () => {
+      console.log(`Botão 2: ${this.getButtonColor(numeroDeCliques2)}`);
+    });
   }
 
   handleButtonThree() {
-    this.setState((estadoAnterior, _props) => ({
+    const { numeroDeCliques3 } = this.state;
+    this.setState((estadoAnterior) => ({
       numeroDeCliques3: estadoAnterior.numeroDeCliques3 + 1,
-    }));
+    }), () => {
+      console.log(`Botão 3: ${this.getButtonColor(numeroDeCliques3)}`);
+    });
   }
 
   getButtonColor(num) {
