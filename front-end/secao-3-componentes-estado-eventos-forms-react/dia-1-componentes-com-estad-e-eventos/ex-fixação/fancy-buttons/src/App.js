@@ -32,20 +32,29 @@ class App extends React.Component {
       numeroDeCliques3: estadoAnterior.numeroDeCliques3 + 1,
     }));
   }
+
+  getButtonColor(num) {
+    return num % 2 === 0 ? 'green' : 'white';
+  }
+
   render() {
     const { numeroDeCliques1, numeroDeCliques2, numeroDeCliques3 } = this.state;
 
     return (
       <div>
-        <button onClick={ this.handleButtonOne }>
-          {`Cliques botão 1: ${ numeroDeCliques1 }`}
-          </button>
-        <button onClick={ this.handleButtonTwo }>
-          {`Cliques botão 2: ${ numeroDeCliques2 }`}
-          </button>
-        <button onClick={ this.handleButtonThree }>
-          {`Cliques botão 3: ${ numeroDeCliques3 }`}
-          </button>
+        <button onClick={this.handleButtonOne} style={{ backgroundColor: this.getButtonColor(numeroDeCliques1) }}>
+          {`Cliques botão 1: ${numeroDeCliques1}`}
+        </button>
+        <button
+          onClick={this.handleButtonTwo}
+          style={{ backgroundColor: this.getButtonColor(numeroDeCliques2) }}>
+          {`Cliques botão 2: ${numeroDeCliques2}`}
+        </button>
+        <button
+          onClick={this.handleButtonThree}
+          style={{ backgroundColor: this.getButtonColor(numeroDeCliques3) }}>
+          {`Cliques botão 3: ${numeroDeCliques3}`}
+        </button>
       </div>
     );
   }
